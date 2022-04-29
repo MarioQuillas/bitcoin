@@ -53,7 +53,9 @@ Building
 PS >py -3 msvc-autogen.py
 ```
 
-2. An optional step is to adjust the settings in the `build_msvc` directory and the `common.init.vcxproj` file. This project file contains settings that are common to all projects such as the runtime library version and target Windows SDK version. The Qt directories can also be set. To specify a non-default path to a static Qt package directory, use the `QTBASEDIR` environment variable.
+2. An optional step is to adjust the settings in the `build_msvc` directory and the `common.init.vcxproj` file. 
+This project file contains settings that are common to all projects such as the runtime library version and target Windows SDK version. 
+The Qt directories can also be set. To specify a non-default path to a static Qt package directory, use the `QTBASEDIR` environment variable.
 
 3. To build from the command-line with the Visual Studio 2019 toolchain use:
 
@@ -65,7 +67,9 @@ Alternatively, open the `build_msvc/bitcoin.sln` file in Visual Studio 2019.
 
 Security
 ---------------------
-[Base address randomization](https://docs.microsoft.com/en-us/cpp/build/reference/dynamicbase-use-address-space-layout-randomization?view=msvc-160) is used to make Bitcoin Core more secure. When building Bitcoin using the `build_msvc` process base address randomization can be disabled by editing `common.init.vcproj` to change `RandomizedBaseAddress` from `true` to `false` and then rebuilding the project.
+[Base address randomization](https://docs.microsoft.com/en-us/cpp/build/reference/dynamicbase-use-address-space-layout-randomization?view=msvc-160) is used to make Bitcoin Core more secure. 
+When building Bitcoin using the `build_msvc` process base address randomization can be disabled by editing `common.init.vcproj`
+ to change `RandomizedBaseAddress` from `true` to `false` and then rebuilding the project.
 
 To check if `bitcoind` has `RandomizedBaseAddress` enabled or disabled run
 
